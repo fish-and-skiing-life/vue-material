@@ -179,6 +179,7 @@
     methods: {
       toggleDialog () {
         if (!isFirefox || this.mdOverrideNative) {
+          console.log('toggleDialog')
           this.showDialog = !this.showDialog
           if (this.showDialog) {
             this.$emit('md-opened')
@@ -190,11 +191,13 @@
         }
       },
       onFocus () {
+        console.log('onFocus')
         if (this.mdOpenOnFocus) {
           this.toggleDialog()
         }
       },
       inputDateToLocalDate () {
+        console.log('inputDateToLocalDate')
         if (this.inputDate) {
           if (this.parsedInputDate) {
             this.localDate = this.parsedInputDate
@@ -204,6 +207,7 @@
         }
       },
       valueDateToLocalDate () {
+        console.log('valueDateToLocalDate')
         if (this.isModelNull) {
           this.localDate = null
         } else if (this.isModelTypeNumber) {
