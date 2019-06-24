@@ -324,12 +324,15 @@
         }
       },
       closeDialog () {
+        console.log('closeDialog')
         this.$emit('md-closed')
       },
       onClose () {
+        console.log('onClose')
         this.closeDialog()
       },
       onCancel () {
+        console.log('onCancel')
         this.closeDialog()
       },
       onConfirm () {
