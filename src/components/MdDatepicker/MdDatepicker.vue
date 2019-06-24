@@ -191,6 +191,7 @@
         }
       },
       onFocus () {
+        console.log('ito')
         console.log('onFocus')
         if (this.mdOpenOnFocus) {
           this.toggleDialog()
